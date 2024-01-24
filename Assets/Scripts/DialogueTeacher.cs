@@ -21,7 +21,7 @@ public class DialogueTeacher : MonoBehaviour
         {
             if (!didDialogueStart)
             {
-                StartDialogue();
+                StartDialogue();                
             }
             else if (dialogueText.text == dialogueLines[lineIndex])
             {
@@ -41,7 +41,8 @@ public class DialogueTeacher : MonoBehaviour
         dialoguePanel.SetActive(true);
         dialogueMark.SetActive(false);
         lineIndex = 0;
-        StartCoroutine(ShowLine());
+        Time.timeScale = 0;
+        StartCoroutine(ShowLine());        
     }
 
     private void NextDialogueLine()
@@ -49,13 +50,14 @@ public class DialogueTeacher : MonoBehaviour
         lineIndex++;
         if (lineIndex < dialogueLines.Length)
         {
-            StartCoroutine(ShowLine());
+            StartCoroutine(ShowLine());            
         } 
         else 
         {
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
             dialogueMark.SetActive(true);
+            Time.timeScale = 1;
         }
     }
 
@@ -66,7 +68,7 @@ public class DialogueTeacher : MonoBehaviour
         foreach (char ch in dialogueLines[lineIndex])
         {
             dialogueText.text += ch;
-            yield return new WaitForSeconds(typingTime);
+            yield return new WaitForSecondsRealtime(typingTime);
         }
     }
 
