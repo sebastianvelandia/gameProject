@@ -1,25 +1,29 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
-public class DialogueTeacher : MonoBehaviour
+public class dialogue : MonoBehaviour
 {
     [SerializeField] private GameObject dialogueMark;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
-    [SerializeField, TextArea(4,6)] private string[] dialogueLines;
+    [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
+
+    private float typingTime = 0.05f;
+
     private bool isPlayerInRange;
     private bool didDialogueStart;
+
     private int lineIndex;
-    private float typingTime = 0.05F;
 
     void Update()
     {
-        if(isPlayerInRange && Input.GetMouseButtonDown (0))
+        if (isPlayerInRange && Input.GetButtonDown("Fire1"))
         {
             if (!didDialogueStart)
             {
-                StartDialogue();                
+                StartDialogue();
             }
             else if (dialogueText.text == dialogueLines[lineIndex])
             {
@@ -31,6 +35,7 @@ public class DialogueTeacher : MonoBehaviour
                 dialogueText.text = dialogueLines[lineIndex];
             }
         }
+
     }
 
     private void StartDialogue()
@@ -39,8 +44,8 @@ public class DialogueTeacher : MonoBehaviour
         dialoguePanel.SetActive(true);
         dialogueMark.SetActive(false);
         lineIndex = 0;
-        Time.timeScale = 0;
-        StartCoroutine(ShowLine());        
+        Time.timeScale = 0f;
+        StartCoroutine(ShowLine());
     }
 
     private void NextDialogueLine()
@@ -48,19 +53,22 @@ public class DialogueTeacher : MonoBehaviour
         lineIndex++;
         if (lineIndex < dialogueLines.Length)
         {
-            StartCoroutine(ShowLine());            
-        } 
-        else 
+            StartCoroutine(ShowLine());
+        }
+        else
         {
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
             dialogueMark.SetActive(true);
-            Time.timeScale = 1;
+            SceneManager.LoadScene("Lobby Museo");
+            Time.timeScale = 1f;
+
         }
     }
 
     private IEnumerator ShowLine()
     {
+
         dialogueText.text = string.Empty;
 
         foreach (char ch in dialogueLines[lineIndex])
@@ -72,22 +80,16 @@ public class DialogueTeacher : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-        {
-            isPlayerInRange = true;
-            dialogueMark.SetActive(true);
-            Debug.Log("Se inicia dialogo");
-        }
-        
+        isPlayerInRange = true;
+        dialogueMark.SetActive(true);
+        Debug.Log("Se inicia dialogo");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
-    {   
-        if (collision.CompareTag("Player"))
-        {
-            isPlayerInRange = false;
-            dialogueMark.SetActive(false);
-            Debug.Log("Se termina dialogo");
-        }
+    {
+        isPlayerInRange = false;
+        dialogueMark.SetActive(false);
+        Debug.Log("Se termina dialogo");
     }
 }
+

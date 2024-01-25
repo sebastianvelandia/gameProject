@@ -30,7 +30,7 @@ public class DoorScript : MonoBehaviour
     {
         if (Input.GetKey("w") || Input.GetKey("up"))
         {
-            Debug.Log("Estudiante quiere regresar al Lobby Universidad");
+            Debug.Log("Estudiante quiere regresar al Lobby Museo");
             StartCoroutine(waitAndLoad(0.2F));
             
         }
@@ -39,6 +39,6 @@ public class DoorScript : MonoBehaviour
     IEnumerator waitAndLoad(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        SceneManager.LoadScene("Lobby Universidad"); 
+        SceneManager.LoadScene("Lobby Museo"); 
     }
 }
