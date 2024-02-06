@@ -15,15 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Lobby Museo.unity
     guid: 6bdcdc936c063cf4aab8c3839671ff64
   - enabled: 1
-    path: Assets/Scenes/Lobby Salon.unity
-    guid: 44c43bbaa054a594dba62f1283ab9a20
+    path: Assets/Scenes/Video 1.unity
+    guid: c57e696f6e5830f46bb37133e17dd8fb
   - enabled: 1
     path: Assets/Scenes/Lobby Salon 1.unity
-    guid: 42c8063af4829f14bbc663b685d6a3ea
-  - enabled: 1
-    path: Assets/Scenes/Lobby Salon 2.unity
-    guid: b4d67bfcc75ffb2419683dea41084b7c
-  - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: 756c9b7b92bccde4c9da0b5e83c21b5d
+    guid: 44c43bbaa054a594dba62f1283ab9a20
   m_configObjects: {}

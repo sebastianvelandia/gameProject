@@ -6,24 +6,17 @@ using UnityEngine.SceneManagement;
 public class DoorScript : MonoBehaviour
 {
     public Animator animator;
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-        {
-            animator.SetBool("Open", true);
-            Debug.Log("Estudiante abre la puerta");
-        }
+        animator.SetBool("Open", true);
+        Debug.Log("Estudiante abre la puerta");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
-    {   
-        if (collision.CompareTag("Player"))
-        {
-            animator.SetBool("Open", false);
-            Debug.Log("Estudiante cierra la puerta");     
-        }
-        
+    {
+        animator.SetBool("Open", false);
+        Debug.Log("Estudiante cierra la puerta");
     }
 
     public void ChangeScene()
@@ -32,13 +25,13 @@ public class DoorScript : MonoBehaviour
         {
             Debug.Log("Estudiante quiere regresar al Lobby Museo");
             StartCoroutine(waitAndLoad(0.2F));
-            
+
         }
     }
 
     IEnumerator waitAndLoad(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        SceneManager.LoadScene("Lobby Museo"); 
+        SceneManager.LoadScene("Lobby Museo");
     }
 }

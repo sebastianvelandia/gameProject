@@ -8,7 +8,7 @@ public class movimientoSalon : MonoBehaviour
     public SpriteRenderer SpriteRenderer;
     public Animator animator;
     private Rigidbody2D rb2D;
-    // Start is called before the first frame update
+    
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
