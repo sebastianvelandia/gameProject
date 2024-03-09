@@ -5,18 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private AudioClip click;
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync("Lobby Universidad");
+        ControladorSonido.Instance.EjecutarSonido(click);
+        GameManager.EscenaAnterior = "Menu";
+        SceneManager.LoadScene("Transicion Escena");
     }
 
     public void QuitGame()
     {
+        ControladorSonido.Instance.EjecutarSonido(click);
         Application.Quit();
     }
 
     public void Home()
     {
-        SceneManager.LoadSceneAsync("Menu");
+        SceneManager.LoadScene("Menu");
     }
 }

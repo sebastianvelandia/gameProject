@@ -24,14 +24,9 @@ public class DoorScript : MonoBehaviour
         if (Input.GetKey("w") || Input.GetKey("up"))
         {
             Debug.Log("Estudiante quiere regresar al Lobby Museo");
-            StartCoroutine(waitAndLoad(0.2F));
+            SceneManager.LoadScene("Lobby Museo");
 
         }
     }
 
-    IEnumerator waitAndLoad(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-        SceneManager.LoadScene("Lobby Museo");
-    }
 }

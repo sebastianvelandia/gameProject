@@ -23,9 +23,15 @@ public class JugadorSeleccionado : MonoBehaviour
         {
             Instantiate(JugadorPrefab(indexJugador), transform.position, Quaternion.identity);
         }
-        else if (SceneManager.GetActiveScene().name == "Lobby Salon 1" || SceneManager.GetActiveScene().name == "Lobby Salon 2" || SceneManager.GetActiveScene().name == "Lobby Salon 3")
+        else if (SceneManager.GetActiveScene().name == "Lobby Historico")
         {
-            Instantiate(JugadorPrefab(indexJugador), transform.position, Quaternion.identity);
+            jugador = Instantiate(JugadorPrefab(indexJugador), transform.position, Quaternion.identity);
+            cinemachineVirtualCamera.Follow = jugador.transform;
+        }
+        else if (SceneManager.GetActiveScene().name == "Lobby Salon 1")
+        {
+            jugador = Instantiate(JugadorPrefab(indexJugador), transform.position, Quaternion.identity);
+            cinemachineVirtualCamera.Follow = jugador.transform;
         }
 
     }

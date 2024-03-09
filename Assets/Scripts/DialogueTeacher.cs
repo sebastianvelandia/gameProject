@@ -8,6 +8,7 @@ public class DialogueTeacher : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
+    [SerializeField] private AudioClip click;
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int lineIndex;
@@ -17,6 +18,7 @@ public class DialogueTeacher : MonoBehaviour
     {
         if (isPlayerInRange && Input.GetMouseButtonDown(0))
         {
+            ControladorSonido.Instance.EjecutarSonido(click);
             if (!didDialogueStart)
             {
                 StartDialogue();

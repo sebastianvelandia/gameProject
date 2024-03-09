@@ -9,7 +9,7 @@ public class dialogue : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
-
+    [SerializeField] private AudioClip click;
     private float typingTime = 0.05f;
 
     private bool isPlayerInRange;
@@ -21,6 +21,7 @@ public class dialogue : MonoBehaviour
     {
         if (isPlayerInRange && Input.GetButtonDown("Fire1"))
         {
+            ControladorSonido.Instance.EjecutarSonido(click);
             if (!didDialogueStart)
             {
                 StartDialogue();
@@ -60,7 +61,8 @@ public class dialogue : MonoBehaviour
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
             dialogueMark.SetActive(true);
-            SceneManager.LoadScene("Lobby Museo");
+            GameManager.EscenaAnterior = "Lobby Universidad";
+            SceneManager.LoadScene("Transicion Escena");
             Time.timeScale = 1f;
 
         }

@@ -196,3 +196,4 @@ MonoBehaviour:
   runSpeed: 6
   SpriteRenderer: {fileID: 5659537838446989911}
   animator: {fileID: 8576480201226262358}
+  pasos: {fileID: 8300000, guid: 32b7f91d0c063b54ba0d5df0d4c431cf, type: 3}

@@ -8,7 +8,7 @@ public class MenuPausa : MonoBehaviour
     [SerializeField] private GameObject botonPausa;
     [SerializeField] private GameObject menuPausa;
     private bool juegoPausado = false;
-    
+    [SerializeField] private AudioClip click;
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -24,6 +24,7 @@ public class MenuPausa : MonoBehaviour
 
     public void PauseGame()
     {
+        ControladorSonido.Instance.EjecutarSonido(click);
         juegoPausado = true;
         Time.timeScale = 0f;
         botonPausa.SetActive(false);
@@ -32,6 +33,7 @@ public class MenuPausa : MonoBehaviour
 
     public void ResumeGame()
     {
+        ControladorSonido.Instance.EjecutarSonido(click);
         juegoPausado = false;
         Time.timeScale = 1f;
         botonPausa.SetActive(true);
@@ -40,12 +42,15 @@ public class MenuPausa : MonoBehaviour
 
     public void RestartGame()
     {
+        ControladorSonido.Instance.EjecutarSonido(click);
         Time.timeScale = 1f;
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
      public void QuitGame()
     {
-        SceneManager.LoadSceneAsync("Menu");
+        ControladorSonido.Instance.EjecutarSonido(click);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Menu");
     }
 }

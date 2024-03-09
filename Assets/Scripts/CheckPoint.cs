@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 public class CheckPoint : MonoBehaviour
 {
     public string numCheckPoint;
+    [SerializeField] private AudioClip click;
     private void OnTriggerEnter2D(Collider2D collision)
     {        
-        StartCoroutine(waitAndLoad(0.8F));        
+        ControladorSonido.Instance.EjecutarSonido(click);
+        StartCoroutine(waitAndLoad(1F));        
     }
 
     IEnumerator waitAndLoad(float waitTime)
@@ -16,19 +18,23 @@ public class CheckPoint : MonoBehaviour
 
         if (numCheckPoint == "1")
         {
-            SceneManager.LoadScene("Video 1"); 
+            GameManager.EscenaAnterior = "Lobby Museo-Salon1";
+            SceneManager.LoadScene("Transicion Escena");
         }else if (numCheckPoint == "2")
         {
-            SceneManager.LoadScene("Lobby Salon 2");
+            Debug.Log("Lobby Salon 2");
 
         }else if (numCheckPoint == "3")
         {
-            SceneManager.LoadScene("Lobby Salon 3");
+            Debug.Log("Lobby Salon 3");
 
         }else if (numCheckPoint == "4")
         {
-            SceneManager.LoadScene("Lobby Universidad");
-
+            GameManager.EscenaAnterior = "Lobby Museo-Uni";
+            SceneManager.LoadScene("Transicion Escena");
+        }else if (numCheckPoint == "5")
+        {
+            SceneManager.LoadScene("Lobby Museo"); 
         }
         
     }

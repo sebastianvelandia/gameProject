@@ -124,6 +124,7 @@ MonoBehaviour:
   runSpeed: 6
   SpriteRenderer: {fileID: 8186507121404071408}
   animator: {fileID: 606470101437813334}
+  pasos: {fileID: 8300000, guid: 32b7f91d0c063b54ba0d5df0d4c431cf, type: 3}
 --- !u!61 &3092402720580289429
 BoxCollider2D:
   m_ObjectHideFlags: 0

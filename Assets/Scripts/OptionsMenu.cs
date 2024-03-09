@@ -10,6 +10,7 @@ public class OptionsMenu : MonoBehaviour
     private int index;
     [SerializeField] private Image imagen;
     [SerializeField] private TextMeshProUGUI nombre;
+    [SerializeField] private AudioClip click;
     private GameManager gameManager;
 
     private void Start() {
@@ -26,6 +27,7 @@ public class OptionsMenu : MonoBehaviour
 
     private void CambiarPantalla()
     {
+        ControladorSonido.Instance.EjecutarSonido(click);
         PlayerPrefs.SetInt("JugadorIndex", index);
         imagen.sprite = gameManager.personajes[index].imagen;
         nombre.text = gameManager.personajes[index].nombre;
