@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public List<Personajes> personajes;
     private static int score;
     private static string nombreEscena;
+    private static int scoreLaberinto;
 
     public static GameManager Instance
     {
@@ -21,12 +22,13 @@ public class GameManager : MonoBehaviour
             return _Instance;
         }
     }
-    
-    private void Awake() {
+
+    private void Awake()
+    {
         if (GameManager._Instance == null)
         {
             GameManager._Instance = this;
-            DontDestroyOnLoad(this.gameObject);            
+            DontDestroyOnLoad(this.gameObject);
         }
         else
         {
@@ -34,22 +36,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void incScore(int inc)
-    {
-        score += inc;
-        Debug.Log("Estudiante recogió un objeto, score = "+score);
-        if (score == 30){
-            Debug.Log("Estudiante recogió los 3 objetos");
-        }         
-    }
-    
     public static int Score
     {
         get
         {
-            if (score == 0)
-                Debug.Log("Score es 0.");
-
             return score;
         }
 
@@ -59,21 +49,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void destroyPortal()
+    public static int ScoreLaberinto
     {
-        GameObject objetoAEliminar = GameObject.FindWithTag("portalMuseo");
-       
-        if (objetoAEliminar != null) {
-            Debug.Log("Se encontró elemento");
-            Destroy(objetoAEliminar);
-        }else
+        get
         {
-            Debug.Log("No se encontró elemento");
+            return scoreLaberinto;
         }
-        
+
+        set
+        {
+            scoreLaberinto = value;
+        }
     }
 
-    public static string EscenaAnterior{
+    public static string EscenaAnterior
+    {
         set
         {
             nombreEscena = value;
@@ -87,12 +77,48 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void TransicionEscena(string escena, float time)
+    public void destroyPortal()
     {
-        StartCoroutine(CambiarEscena(escena,time));
+        GameObject objetoAEliminar = GameObject.FindWithTag("portalMuseo");
+
+        if (objetoAEliminar != null)
+        {
+            Debug.Log("Se encontró elemento");
+            Destroy(objetoAEliminar);
+        }
+        else
+        {
+            Debug.Log("No se encontró elemento");
+        }
+
     }
 
-    private IEnumerator CambiarEscena(string escena,float time)
+    public void incScore(int inc)
+    {
+        score += inc;
+        Debug.Log("Estudiante recogió un objeto, score = " + score);
+        if (score == 30)
+        {
+            Debug.Log("Estudiante recogió los 3 objetos");
+        }
+    }
+
+    public void incScoreLaberinto(int inc)
+    {
+        scoreLaberinto += inc;
+        Debug.Log("Estudiante recogió un objeto, score = " + scoreLaberinto);
+        if (score == 3)
+        {
+            Debug.Log("Estudiante recogió los 3 objetos");
+        }
+    }
+
+    public void TransicionEscena(string escena, float time)
+    {
+        StartCoroutine(CambiarEscena(escena, time));
+    }
+
+    private IEnumerator CambiarEscena(string escena, float time)
     {
         yield return new WaitForSecondsRealtime(time);
         SceneManager.LoadScene(escena);

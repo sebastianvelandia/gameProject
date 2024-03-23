@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7287076836651124380}
   - component: {fileID: 7732520086521333900}
   - component: {fileID: 3261039795686968568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Jugador 1 - Museo
-  m_TagString: Untagged
+  m_TagString: Jugador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,6 +124,7 @@ MonoBehaviour:
   runSpeed: 4
   SpriteRenderer: {fileID: 2145348502374228014}
   animator: {fileID: 5890771823727893780}
+  vidas: []
 --- !u!61 &7732520086521333900
 BoxCollider2D:
   m_ObjectHideFlags: 0

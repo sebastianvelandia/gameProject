@@ -17,9 +17,10 @@ public class CheckPoint : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         if (numCheckPoint == "1")
-        {
+        {   
             GameManager.EscenaAnterior = "Lobby Museo-Salon1";
             SceneManager.LoadScene("Transicion Escena");
+
         }else if (numCheckPoint == "2")
         {
             Debug.Log("Lobby Salon 2");

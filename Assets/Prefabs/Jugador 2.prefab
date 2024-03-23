@@ -124,7 +124,6 @@ MonoBehaviour:
   runSpeed: 6
   SpriteRenderer: {fileID: 2048000608411078106}
   animator: {fileID: 6387611129111493674}
-  pasos: {fileID: 8300000, guid: 32b7f91d0c063b54ba0d5df0d4c431cf, type: 3}
 --- !u!50 &2882613836501235980
 Rigidbody2D:
   serializedVersion: 4

@@ -28,22 +28,26 @@ public class Transicion : MonoBehaviour
         switch (nombreEscenaAnterior)
         {
             case "Menu":
-                GameManager.Instance.TransicionEscena("Lobby Universidad",2F);
+                GameManager.Instance.TransicionEscena("Lobby Universidad",1.5F);
                 break;
             case "Lobby Universidad":
-                GameManager.Instance.TransicionEscena("Lobby Museo",2F);
+                GameManager.Instance.TransicionEscena("Lobby Museo",1.5F);
                 break;
             case "Lobby Museo":
-                GameManager.Instance.TransicionEscena("Lobby Historico",2F);
+                GameManager.Instance.TransicionEscena("Lobby Historico",1.5F);
                 break;
             case "Lobby Historico":
-                GameManager.Instance.TransicionEscena("Lobby Museo",2F);
+                GameManager.Instance.TransicionEscena("Lobby Museo",1.5F);
                 break;
             case "Lobby Museo-Uni":
-                GameManager.Instance.TransicionEscena("Lobby Universidad",2F);
+                GameManager.Instance.TransicionEscena("Lobby Universidad",1.5F);
                 break;
             case "Lobby Museo-Salon1":
-                GameManager.Instance.TransicionEscena("Lobby Salon 1",2F);
+                GameManager.Instance.TransicionEscena("Lobby Salon 1",1.5F);
+                break;
+            case "Lobby Salon1-Museo":
+                // GameManager.Instance.TransicionEscena("GameOver",2F);
+                GameManager.Instance.TransicionEscena("Lobby Museo",1.5F);
                 break;
         }
     }

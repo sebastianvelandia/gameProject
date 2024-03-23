@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4917187015091040173}
   - component: {fileID: 1223701476257217130}
   - component: {fileID: 8440101518595050963}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Jugador 2 - Museo
-  m_TagString: Untagged
+  m_TagString: Jugador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
