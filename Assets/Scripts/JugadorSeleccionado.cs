@@ -28,7 +28,7 @@ public class JugadorSeleccionado : MonoBehaviour
             jugador = Instantiate(JugadorPrefab(indexJugador), transform.position, Quaternion.identity);
             cinemachineVirtualCamera.Follow = jugador.transform;
         }
-        else if (SceneManager.GetActiveScene().name == "Lobby Salon 1")
+        else if (SceneManager.GetActiveScene().name == "Lobby Salon 1" || SceneManager.GetActiveScene().name == "Lobby Salon 2" || SceneManager.GetActiveScene().name == "Lobby Salon 3")
         {
             jugador = Instantiate(JugadorPrefab(indexJugador), transform.position, Quaternion.identity);
             cinemachineVirtualCamera.Follow = jugador.transform;

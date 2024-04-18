@@ -23,19 +23,18 @@ public class CheckPoint : MonoBehaviour
 
         }else if (numCheckPoint == "2")
         {
-            Debug.Log("Lobby Salon 2");
+            GameManager.EscenaAnterior = "Lobby Museo-Salon2";
+            SceneManager.LoadScene("Transicion Escena");
 
         }else if (numCheckPoint == "3")
         {
-            Debug.Log("Lobby Salon 3");
+            GameManager.EscenaAnterior = "Lobby Museo-Salon3";
+            SceneManager.LoadScene("Transicion Escena");
 
         }else if (numCheckPoint == "4")
         {
             GameManager.EscenaAnterior = "Lobby Museo-Uni";
             SceneManager.LoadScene("Transicion Escena");
-        }else if (numCheckPoint == "5")
-        {
-            SceneManager.LoadScene("Lobby Museo"); 
         }
         
     }

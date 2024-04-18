@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     private static int score;
     private static string nombreEscena;
     private static int scoreLaberinto;
-
+    private static int savelLevel;
+    private static string difficultyLevel;
     public static GameManager Instance
     {
         get
@@ -62,6 +63,31 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public static int SaveLevel
+    {
+        get
+        {
+            return savelLevel;
+        }
+
+        set
+        {
+            savelLevel = value;
+        }
+    }
+    public static string DifficultyLevel
+    {
+        get
+        {
+            return difficultyLevel;
+        }
+
+        set
+        {
+            difficultyLevel = value;
+        }
+    }
+
     public static string EscenaAnterior
     {
         set
@@ -77,7 +103,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void destroyPortal()
+    public void DestroyPortal()
     {
         GameObject objetoAEliminar = GameObject.FindWithTag("portalMuseo");
 
@@ -93,24 +119,16 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void incScore(int inc)
+    public void IncScore(int inc)
     {
         score += inc;
-        Debug.Log("Estudiante recogió un objeto, score = " + score);
-        if (score == 30)
-        {
-            Debug.Log("Estudiante recogió los 3 objetos");
-        }
+        Debug.Log("Score historico = " + score);
     }
 
-    public void incScoreLaberinto(int inc)
+    public void IncScoreLaberinto(int inc)
     {
         scoreLaberinto += inc;
-        Debug.Log("Estudiante recogió un objeto, score = " + scoreLaberinto);
-        if (score == 3)
-        {
-            Debug.Log("Estudiante recogió los 3 objetos");
-        }
+        Debug.Log("Score salon = " + scoreLaberinto);
     }
 
     public void TransicionEscena(string escena, float time)
@@ -122,7 +140,6 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(time);
         SceneManager.LoadScene(escena);
-
     }
 
 

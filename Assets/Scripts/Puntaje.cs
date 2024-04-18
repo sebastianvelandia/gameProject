@@ -14,7 +14,16 @@ public class Puntaje : MonoBehaviour
 
     public void SumarObjetos(int objeto){
         objetosObtenidos += objeto;
-        Debug.Log("Puntaje = "+objetosObtenidos);
-        puntajeText.text = "Objetos obtenidos: " + objetosObtenidos + "/3";
+        puntajeText.text = "- Objetos obtenidos: " + objetosObtenidos + "/3";
+    }
+
+    public void MostrarMensaje(){
+        puntajeText.text = "- Objetos obtenidos: " + objetosObtenidos + "/3.\n"+
+        "- Ve al portal que esta abajo a la derecha.";
+    }
+
+    public void MostrarMensajeHistorico(){
+        puntajeText.text = "- Objetos obtenidos: " + objetosObtenidos + "/3.\n"+
+        "- Ve al portal.";
     }
 }

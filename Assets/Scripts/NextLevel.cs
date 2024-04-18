@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class NextLevel : MonoBehaviour
 {
     [SerializeField] public List<GameObject> vidasJugador;
+    [SerializeField] private string escenaActual;
     private int totalVidasJugador;
 
     private void Awake() {
@@ -36,6 +37,11 @@ public class NextLevel : MonoBehaviour
             return false;
         }
         return false;
+    }
+
+    public void PlayerDead()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 
 }

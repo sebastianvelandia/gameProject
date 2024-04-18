@@ -10,7 +10,7 @@ public class Transicion : MonoBehaviour
     private TextMeshProUGUI titulo;
 
     private void Start() {
-        animator.Play("Panel", 0, 0);
+        // animator.Play("Panel", 0, 0);
         string nombreEscenaAnterior = GameManager.EscenaAnterior;
         if (nombreEscenaAnterior == "Lobby Museo-Salon1")
         {
@@ -18,6 +18,20 @@ public class Transicion : MonoBehaviour
             if (titulo.CompareTag("Titulo"))
             {
                 titulo.text = "Salon de Sistemas Digitales";
+            }
+        } else if (nombreEscenaAnterior == "Lobby Museo-Salon2")
+        {
+            titulo = FindObjectOfType<TextMeshProUGUI>();
+            if (titulo.CompareTag("Titulo"))
+            {
+                titulo.text = "Salon de Automatización";
+            }
+        } else if (nombreEscenaAnterior == "Lobby Museo-Salon3")
+        {
+            titulo = FindObjectOfType<TextMeshProUGUI>();
+            if (titulo.CompareTag("Titulo"))
+            {
+                titulo.text = "Salon de Telecomunicaciones";
             }
         }
         
@@ -43,10 +57,27 @@ public class Transicion : MonoBehaviour
                 GameManager.Instance.TransicionEscena("Lobby Universidad",1.5F);
                 break;
             case "Lobby Museo-Salon1":
+                if (GameManager.ScoreLaberinto <= 3)
+                {
+                    GameManager.ScoreLaberinto = 0;
+                }
                 GameManager.Instance.TransicionEscena("Lobby Salon 1",1.5F);
                 break;
+            case "Lobby Museo-Salon2":
+                if (GameManager.ScoreLaberinto <= 6)
+                {
+                    GameManager.ScoreLaberinto = 3;
+                }
+                GameManager.Instance.TransicionEscena("Lobby Salon 2",1.5F);
+                break;
+            case "Lobby Museo-Salon3":
+                if (GameManager.ScoreLaberinto <= 9)
+                {
+                    GameManager.ScoreLaberinto = 6;
+                }
+                GameManager.Instance.TransicionEscena("Lobby Salon 3",1.5F);
+                break;
             case "Lobby Salon1-Museo":
-                // GameManager.Instance.TransicionEscena("GameOver",2F);
                 GameManager.Instance.TransicionEscena("Lobby Museo",1.5F);
                 break;
         }

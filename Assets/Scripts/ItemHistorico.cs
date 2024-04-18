@@ -6,11 +6,19 @@ using UnityEngine.SceneManagement;
 public class ItemHistorico : MonoBehaviour
 {
     [SerializeField] private AudioClip item;
+    [SerializeField] private Puntaje puntaje;
+    [SerializeField] private int objetoObtenido;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         ControladorSonido.Instance.EjecutarSonido(item);
         Destroy(gameObject);
-        GameManager.Instance.incScore(10);
+        puntaje.SumarObjetos(objetoObtenido);
+        GameManager.Instance.IncScore(10);
+
+        if (GameManager.Score == 30)
+        {
+            puntaje.MostrarMensajeHistorico();
+        }
     }
 
 }

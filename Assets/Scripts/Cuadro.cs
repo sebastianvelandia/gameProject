@@ -52,13 +52,11 @@ public class Cuadro : MonoBehaviour
     {
         isPlayerInRange = true;
         visualMark.SetActive(true);
-        Debug.Log("Jugador cerca del cuadro");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         isPlayerInRange = false;
         visualMark.SetActive(false);
-        Debug.Log("Jugador lejos del cuadro");
     }
 }

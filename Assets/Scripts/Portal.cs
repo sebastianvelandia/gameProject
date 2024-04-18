@@ -25,6 +25,12 @@ public class Portal : MonoBehaviour
             SceneManager.LoadScene("Transicion Escena");
             
         }
+        int numSalon1 = GameManager.ScoreLaberinto;
+        if (numSalon1 == 9)
+        {
+            Debug.Log("Se muestran creditos"+ numSalon1);
+            SceneManager.LoadScene("Creditos");
+        }
     }
 
 }

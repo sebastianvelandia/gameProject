@@ -44,6 +44,19 @@ public class MenuPausa : MonoBehaviour
     {
         ControladorSonido.Instance.EjecutarSonido(click);
         Time.timeScale = 1f;
+        if (SceneManager.GetActiveScene().name == "Lobby Salon 1")
+        {   
+            GameManager.ScoreLaberinto = 0;
+
+        }else if (SceneManager.GetActiveScene().name == "Lobby Salon 2")
+        {
+            GameManager.ScoreLaberinto = 3;
+
+        }else if (SceneManager.GetActiveScene().name == "Lobby Salon 3")
+        {
+            GameManager.ScoreLaberinto = 6;
+
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
@@ -51,6 +64,9 @@ public class MenuPausa : MonoBehaviour
     {
         ControladorSonido.Instance.EjecutarSonido(click);
         Time.timeScale = 1f;
+        GameManager.Score = 0;
+        GameManager.ScoreLaberinto = 0;
+        GameManager.SaveLevel = 0;
         SceneManager.LoadScene("Menu");
     }
 }

@@ -54,7 +54,7 @@ public class ControladorEnemigo : MonoBehaviour
             StartCoroutine(ResetearColisionActiva(1f));
             if (estado)
             {
-                PlayerDead();
+                nextLevel.PlayerDead();
             }
             else{
                 Debug.Log("Jugador sigue vivo...");
@@ -72,13 +72,6 @@ public class ControladorEnemigo : MonoBehaviour
     public void FinGolpe()
     {
         animator.SetBool("golpe", false);
-    }
-
-    public void PlayerDead()
-    {
-        GameManager.ScoreLaberinto = 0;
-        GameManager.EscenaAnterior = "Lobby Salon1-Museo";
-        SceneManager.LoadScene("Transicion Escena");
     }
 
 }
