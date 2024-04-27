@@ -56,6 +56,10 @@ public class MenuPausa : MonoBehaviour
         {
             GameManager.ScoreLaberinto = 6;
 
+        }else if (SceneManager.GetActiveScene().name == "Lobby Historico")
+        {
+            GameManager.Score = 0;
+
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

@@ -14,13 +14,11 @@ public class Portal : MonoBehaviour
 
         if (nombreEscena == "Lobby Museo")
         {
-            Debug.Log("Estudiante entra al portal de historico");
             GameManager.Score = 0;
             GameManager.EscenaAnterior = "Lobby Museo";
             SceneManager.LoadScene("Transicion Escena");
             
         }else{
-            Debug.Log("Estudiante entra al portal de museo");
             GameManager.EscenaAnterior = "Lobby Historico";
             SceneManager.LoadScene("Transicion Escena");
             
@@ -28,7 +26,6 @@ public class Portal : MonoBehaviour
         int numSalon1 = GameManager.ScoreLaberinto;
         if (numSalon1 == 9)
         {
-            Debug.Log("Se muestran creditos"+ numSalon1);
             SceneManager.LoadScene("Creditos");
         }
     }

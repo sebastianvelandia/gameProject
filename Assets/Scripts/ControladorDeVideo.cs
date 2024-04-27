@@ -14,6 +14,9 @@ public class ControladorDeVideo : MonoBehaviour
 
     private void TerminarVideo(VideoPlayer vp)
     {
-        SceneManager.LoadScene("Lobby Salon 1");
+        if (vp == videoPlayer)
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 }

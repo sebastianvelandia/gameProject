@@ -76,13 +76,11 @@ public class DialogueTeacher : MonoBehaviour
     {
         isPlayerInRange = true;
         dialogueMark.SetActive(true);
-        Debug.Log("Se inicia dialogo");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         isPlayerInRange = false;
         dialogueMark.SetActive(false);
-        Debug.Log("Se termina dialogo");
     }
 }

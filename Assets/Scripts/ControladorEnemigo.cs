@@ -47,7 +47,6 @@ public class ControladorEnemigo : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Jugador") && !colisionActiva)
         {
-            Debug.Log("Colision con Jugador...");
             colisionActiva = true;
             animator.SetBool("golpe", true);
             bool estado = nextLevel.RestarVida();
@@ -55,9 +54,6 @@ public class ControladorEnemigo : MonoBehaviour
             if (estado)
             {
                 nextLevel.PlayerDead();
-            }
-            else{
-                Debug.Log("Jugador sigue vivo...");
             }
             // Girar();
         }

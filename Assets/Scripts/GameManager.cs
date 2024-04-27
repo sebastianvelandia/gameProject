@@ -109,7 +109,6 @@ public class GameManager : MonoBehaviour
 
         if (objetoAEliminar != null)
         {
-            Debug.Log("Se encontró elemento");
             Destroy(objetoAEliminar);
         }
         else
