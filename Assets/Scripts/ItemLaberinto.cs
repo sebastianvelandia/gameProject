@@ -14,7 +14,7 @@ public class ItemLaberinto : MonoBehaviour
         ControladorSonido.Instance.EjecutarSonido(item);
         GameManager.Instance.IncScoreLaberinto(objetoObtenido);
 
-        if (GameManager.ScoreLaberinto == 3 )
+        if (GameManager.ScoreLaberinto == 3)
         {
             portalNextLevel.SetActive(true);
             puntaje.MostrarMensaje();

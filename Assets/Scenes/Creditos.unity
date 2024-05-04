@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 258176447}
   - component: {fileID: 258176446}
   - component: {fileID: 258176445}
-  - component: {fileID: 258176448}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -159,7 +158,7 @@ Camera:
   m_GameObject: {fileID: 258176444}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -216,20 +215,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &258176448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258176444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c976d64271f2b04cbe904c44c0d9062, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 429851008}
---- !u!1 &429851007
+--- !u!1 &772823945
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,69 +223,415 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 429851009}
-  - component: {fileID: 429851008}
+  - component: {fileID: 772823948}
+  - component: {fileID: 772823947}
+  - component: {fileID: 772823946}
   m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &772823946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772823945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &772823947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772823945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &772823948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772823945}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1240369135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1240369136}
+  - component: {fileID: 1240369138}
+  - component: {fileID: 1240369137}
+  - component: {fileID: 1240369139}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1240369136
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240369135}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1713272805}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -203, y: 422}
+  m_SizeDelta: {x: 441.761, y: 134.943}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1240369137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240369135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Universidad del Quind\xEDo \r\nFacultad de ingenier\xEDa \r\nPrograma
+    de ingenier\xEDa electr\xF3nica \r\nVideo juego para la promoci\xF3n del programa
+    de ingenier\xEDa electr\xF3nica de la Universidad del Quind\xEDo   \r\n\r\n\r\nAsesores
+    y Directores del Diplomado\r\n\r\nSantiago Murillo\r\nJorge Aldana\r\nAlexander
+    Lopez Parrado\r\nJorge Ivan Marin Hurtado \r\nNatalia Arango\r\n\r\nDirecci\xF3n
+    Metodolog\xEDas y Documentaci\xF3n\r\n\r\nJeiner Stiven Alvarez Acosta\r\nJuan
+    Sebastian Velandia \r\n\r\nDesarrolladores\r\n\r\nJeiner Stiven Alvarez Acosta\r\nJuan
+    Sebastian Velandia \r\n\r\nCreaci\xF3n De Historias\r\n\r\n Jeiner Stiven Alvarez
+    Acosta\r\nJuan Sebastian Velandia \r\n\r\n\r\nPruebas Unitarias \r\n\r\nJeiner
+    Stiven Alvarez Acosta\r\nJuan Sebastian Velandia \r\n\r\n\r\nSoftware\r\nUnity
+    2022.3.13.f12022 Unity Technologies\r\nVisual Studio Code\r\n\r\n\r\nObjetos
+    2D\r\nMicrosoft\r\nUnity Asset Store\r\nFreepik\r\nPixabay\r\n\r\nTomado de \r\n\r\nhttps://www.freepik.es/vector-gratis/conjunto-pose-personaje-mujer-negocios-diseno-vector-dibujos-animados-plana_28159764.htm#query=teacher%20sprite&position=2&from_view=search&track=ais&uuid=ef14cf48-b5ff-493a-8dbb-2c30e1370ccf\r\nhttps://www.freepik.es/vector-gratis/concepto-mensaje-icono-3d-burbuja-voz-bocadillo-dialogo-realista-puntos-chat-cuadro-mensaje-vector_33632366.htm#page=2&query=simbolo%20chat&position=18&from_view=search&track=ais&uuid=268b830f-38bd-4266-abab-2827f29117db\r\nhttps://www.freepik.es/vector-gratis/marco-roca-ui-tablero-boton-textura-piedra-interfaz-juego-conjunto-vectores-dibujos-animados-icono-placa-gui-medieval-menu-aplicaciones-moviles-aislado-fondo-letrero-informacion-activo-placa-juego-salida_72090672.htm#query=menu%20asset&position=5&from_view=search&track=ais&uuid=fa36021b-cd9d-4055-b8ad-ec48d00163cb\r\nhttps://www.freepik.es/vector-gratis/pack-cuatro-ubicaciones-carretera-isometricas_963367.htm#query=check%20point%20sprite&position=30&from_view=search&track=ais&uuid=a07840a6-3334-4a78-ada1-69fecf2b2e6a\r\nhttps://assetstore.unity.com/packages/2d/textures-materials/city-pack-top-down-pixel-art-195403\r\nhttps://www.pngegg.com/en/png-wcqlu/download\r\nhttps://www.freepik.es/vector-gratis/juego-azulejos-piso-madera_6128920.htm#query=material%20de%20suelo%20y%20paredes&position=25&from_view=search&track=ais&uuid=07947950-9fb0-40b1-ac8d-d7f3cde303d0\r\nhttps://www.freepik.es/vector-gratis/conjunto-ceramica-realista-piezas-mosaico-rectangular-diferentes-patrones-color-texto-editable_7286667.htm#query=material%20para%20interior%20de%20edificio&position=8&from_view=search&track=ais&uuid=2b43bcc6-4c4b-4dc6-a4af-df2fae049341\r\nhttps://www.freepik.es/vector-gratis/tipos-suelo_9650897.htm#query=suelo%20dibujo&position=4&from_view=keyword&track=ais&uuid=cb68e429-370f-47c7-b694-68edd5e241cc\r\nhttps://rutadelasoportunidades.uniquindio.edu.co/publicaciones/224/simbolos/\r\nhttps://www.freepik.es/vector-gratis/circulos-luminosos-destellos-efecto-luz-magica-polvo-purpurina_12566258.htm#from_view=detail_alsolike\r\nhttps://www.freepik.es/vector-gratis/composicion-isometrica-astronomia-imagen-radar-ilustracion-vector-antena-parabolica_23505553.htm#fromView=search&page=1&position=15&uuid=3384fc8b-3a04-493d-aaa8-b5df2e625cec\r\nhttps://pixabay.com/es/vectors/teclado-electr\xF3nico-computadora-311803/\r\nhttps://pixabay.com/es/vectors/rat\xF3n-computadora-tecnolog\xEDa-34688/\r\nhttps://www.freepik.es/vector-gratis/conjunto-corazones-pixelados-llenos-linea_37166763.htm#fromView=search&page=1&position=16&uuid=76974035-6fdd-4280-9e0e-6e201a2033ea\r\nhttps://www.freepik.es/vector-gratis/fondo-game-over-distorision_4047703.htm#fromView=search&page=2&position=14&uuid=26d93eb3-bfd8-4d02-8c2b-ae93d5f5c42d\r\nhttps://es.wikipedia.org/wiki/Archivo:Arduino_uno.png\r\nhttps://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started\r\nhttps://www.uniquindio.edu.co/programas/publicaciones/286/ingenieria-electronica/\r\nhttps://bdigital.uniquindio.edu.co/handle/001/1?locale-attribute=en\r\nhttps://www.freepik.es/vector-gratis/conjunto-isometrico-componentes-electronicos-semiconductores_6169434.htm#fromView=search&page=1&position=28&uuid=26d93eb3-bfd8-4d02-8c2b-ae93d5f5c42d\r\nhttps://brandemia.org/nueva-identidad-de-ubuntu-y-logo-2022\r\nhttps://es.m.wikipedia.org/wiki/Archivo:Matlab_Logo.png\r\nhttps://www.freepik.es/foto-gratis/surtido-utiles-escolares-vista-superior_13360778.htm#fromView=search&page=1&position=48&uuid=10909cc3-7469-47c5-9eae-c4c617625dd5\r\nhttps://www.freepik.es/vector-gratis/programador-femenino-haciendo-su-trabajo-oficina_5483063.htm#fromView=search&page=1&position=13&uuid=439fafcf-bed0-4fa6-ac43-f5260c928c34\r\n\r\n\r\nhttps://www.hikrobotics.com/en/mobilerobot/LMR\r\nhttps://www.freepik.es/foto-gratis/antena-telecomunicaciones-radio-television-telefono-nubes-cielo-azul_1189812.htm#fromView=search&page=1&position=38&uuid=8e3585e4-0520-4860-b3af-060e06beed98\r\nhttps://alfarsl.es/caracteristicas-cable-coaxial-dielectrico/\r\nhttps://www.linksys.com/co/wifi-5-router-dual-band-ac1200-e5400/E5400.html\r\nhttps://www.freepik.es/vector-gratis/concepto-isometrico-internet-5g-trabajadores-uniforme-tendido-ilustracion-vector-cable-ethernet_16893821.htm#fromView=search&page=1&position=30&uuid=d6f70c9a-a9ac-4ae2-9349-962e612daa42\r\nhttps://www.freepik.es/vector-gratis/conjunto-iconos-robots_4430052.htm#fromView=search&page=1&position=38&uuid=4be15900-0250-432a-bfdb-0c273f1bf10a\r\nhttps://www.freepik.es/vector-gratis/conjunto-iconos-isometricos-equipos-comunicacion-inalambricos-como-torres-antenas-satelite-enrutador_3862003.htm#fromView=search&page=1&position=3&uuid=d040b338-65f9-479b-96d8-0bfdc7c943d5\r\nhttps://opengameart.org/content/xeon-ultimate-smash-friends\r\n\r\nIm\xE1genes
+    y Audios\r\n\r\nPixabay\r\nGoogle\r\nUniversidad del Quind\xEDo\r\n\r\nhttps://pixabay.com/es/sound-effects/game-music-loop-3-144252/\r\nhttps://pixabay.com/es/sound-effects/teleport-90137/\r\nhttps://pixabay.com/es/sound-effects/mouse-click-153941/\r\nhttps://pixabay.com/es/sound-effects/digital-beeping-151921/\r\n\r\n\r\n\r\n\r\nMUCHAS
+    GRACIAS POR JUGAR Y PARTICIPAR DE ESTA EXPERIENCIA DE APRENDIZAJE\r\n\r\nLOS
+    ESPERAMOS PARA CONTINUAR SU FORMACI\xD3N PROFESIONAL EN LA UNIVERSIDAD DEL QUINDIO\r\n"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -521.67487, y: -35.668343, z: -940.99475, w: -5429.3984}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1240369138
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240369135}
+  m_CullTransparentMesh: 1
+--- !u!223 &1240369139
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240369135}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!1 &1656670258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1656670263}
+  - component: {fileID: 1656670262}
+  - component: {fileID: 1656670261}
+  - component: {fileID: 1656670260}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1656670260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656670258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1656670261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656670258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1656670262
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656670258}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1656670263
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656670258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1713272805}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!1 &1713272804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1713272805}
+  - component: {fileID: 1713272806}
+  - component: {fileID: 1713272807}
+  m_Layer: 5
   m_Name: Creditos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!328 &429851008
-VideoPlayer:
+--- !u!224 &1713272805
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429851007}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: f38fe62f242ffc14b997253ae93915f7, type: 3}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 258176446}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 0
-  m_AspectRatio: 2
-  m_DataSource: 0
-  m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
-  m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
---- !u!4 &429851009
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429851007}
-  serializedVersion: 2
+  m_GameObject: {fileID: 1713272804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1477501, y: -1.9308652, z: -0.02970258}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 1240369136}
+  m_Father: {fileID: 1656670263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1713272806
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713272804}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 51b299cc2007aff4baa3c8a04afafecd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1713272807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713272804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c976d64271f2b04cbe904c44c0d9062, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 258176447}
-  - {fileID: 429851009}
+  - {fileID: 1656670263}
+  - {fileID: 772823948}
